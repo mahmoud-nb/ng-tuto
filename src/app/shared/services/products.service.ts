@@ -57,12 +57,16 @@ export class ProductsService {
     return this._selectedProduct$;
   }
 
-  setSelectedProduct$(product:Product):void{
+  setSelectedProduct$(product:Product):void {
     this._selectedProduct$.next(product);
   }
 
   getSelectedProduct$(): BehaviorSubject<Product>{
     return this._selectedProduct$;
+  }
+
+  addProduct(product:Product):void {
+    this.products.push(product);
   }
 
 
