@@ -12,8 +12,8 @@
       -
       <strong>{{ facoriteItems }}  </strong>favorite item<span *ngIf="facoriteItems > 1" >s</span>
     </button>
-    <div class="btn-group">
-      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown">
+    <div class="btn-group" [ngClass]="{ 'open' : openSortOptions }">
+      <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" (click)="toggleSortDropdown()">
         Sort Products &nbsp;
         <span class="caret"></span>
       </button>

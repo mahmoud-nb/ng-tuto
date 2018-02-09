@@ -21,6 +21,8 @@ export class ProductsItemComponent implements OnInit {
   ngOnInit() {
   }
 
+  
+
   showMore():boolean {
     this.truncateLimit = this.truncateLimit === this.defaulttruncateLimit ? null : this.defaulttruncateLimit ;
     return this.truncateLimit === this.defaulttruncateLimit ;

@@ -12,6 +12,8 @@ export class ProductsListComponent implements OnInit {
   products:Product[] = [];
   facoriteItems: number = 0;
 
+  openSortOptions:boolean = false;
+
   constructor(private productsService:ProductsService) { }
 
   ngOnInit() {
@@ -35,6 +37,10 @@ export class ProductsListComponent implements OnInit {
     let p:Product = this.products.find(el => el.id === product.id );
     p.favorite = product.favorite ;
     this.getFavoriteNbr();
+  }
+
+  toggleSortDropdown(): void {
+    this.openSortOptions = !this.openSortOptions;
   }
 
 }
