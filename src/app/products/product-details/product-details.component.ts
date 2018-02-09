@@ -26,7 +26,9 @@ export class ProductDetailsComponent implements OnInit {
 
     //this.productsService.getSelectedProduct$().subscribe( res => this.product = res );
 
-    this.productsService.selectedProduct$.subscribe( res => this.product = res );
+    this.productsService.selectedProduct$.subscribe( res => {
+      this.product = res;
+    } );
 
   }
 

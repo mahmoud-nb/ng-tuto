@@ -7,6 +7,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 
 import { RouterModule } from "@angular/router";
 import { routes } from "../shared/config/routes";
+import { AddProductComponent } from './add-product/add-product.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { routes } from "../shared/config/routes";
     ProductsListComponent,
     ProductsItemComponent,
     TruncatePipe,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    AddProductComponent
   ]
 })
 export class ProductsModule { }
