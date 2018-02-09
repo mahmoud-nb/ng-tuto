@@ -18,20 +18,18 @@
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li><a href="#">By Price Low</a></li>
+        <li><a href="javascript:void(0)" (click)="sortBy('price', 'ASC')">By Price Low</a></li>
         <li class="divider"></li>
-        <li><a href="#">By Price High</a></li>
+        <li><a href="javascript:void(0)" (click)="sortBy('price', 'DESC')">By Price High</a></li>
         <li class="divider"></li>
-        <li><a href="#">By Popularity</a></li>
-        <li class="divider"></li>
-        <li><a href="#">By Reviews</a></li>
+        <li><a href="javascript:void(0)" (click)="sortBy('name', 'ASC')">By Name</a></li>
       </ul>
     </div>
   </div>
 </div>
 <!-- /.row -->
 <div class="row">
-
+  <div>Sorted by : {{ sortOption.by }}</div>
   <div *ngFor="let product of products" class="col-md-4 text-center col-sm-6 col-xs-6">
     <app-products-item [product]="product" (onFavoriteChange)="onFavoriteChange($event)" ></app-products-item>
   </div>

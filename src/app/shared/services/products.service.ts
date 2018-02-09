@@ -10,10 +10,10 @@ export class ProductsService {
     this.products = [
       {
         id: 1,
-        name: "Samsung Galaxy",
+        name: "Huawei",
         description: "Ptional dismiss button in tional dismiss button in",
         image: "assets/img/dummyimg.png",
-        price: 32,
+        price: 38,
         category: "Mobile",
         favorite: true
       },
@@ -28,10 +28,10 @@ export class ProductsService {
       },
       {
         id: 3,
-        name: "Samsung S7 Edge",
+        name: "Nokia",
         description: "Ptional dismiss button in tional dismiss button in",
         image: "assets/img/dummyimg.png",
-        price: 32,
+        price: 48,
         category: "Mobile",
         favorite: true
       }
