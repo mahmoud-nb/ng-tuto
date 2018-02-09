@@ -1,6 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Product} from "../../shared/models/product";
 import {ProductsService} from "../../shared/services/products.service";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-products-item',
@@ -15,7 +16,10 @@ export class ProductsItemComponent implements OnInit {
   @Input() product:Product = null;
   @Output() onFavoriteChange = new EventEmitter<Product>();
 
-  constructor(private productsService:ProductsService) {
+  constructor(
+    private productsService:ProductsService,
+    private router: Router
+              ) {
     this.truncateLimit = this.defaulttruncateLimit;
   }
 
@@ -36,6 +40,13 @@ export class ProductsItemComponent implements OnInit {
 
   addToCart():void {
     this.productsService.incCartNbr();
+  }
+
+  setCurrentProduct():void {
+   this.productsService.setSelectedProduct$(this.product);
+
+    this.router.navigate(['/product-details']);
+    //this.productsService.selectedProduct$ = this.product ;
   }
 
 }

@@ -7,6 +7,8 @@ export class ProductsService {
 
 
   _cartNbr$ = new BehaviorSubject<number>(0);
+  private _selectedProduct$ = new BehaviorSubject<Product>(null);
+  //_products$ = new BehaviorSubject<Product[]>([]);
 
 
   products:Product[];
@@ -46,6 +48,24 @@ export class ProductsService {
     let currentCartNbr = this._cartNbr$.getValue();
     this._cartNbr$.next(++currentCartNbr);
   }
+
+  // set selectedProduct$(product:Product):void{
+  //   this._selectedProduct$.next(product);
+  // }
+
+  get selectedProduct$(): Observable<Product>{
+    return this._selectedProduct$;
+  }
+
+  setSelectedProduct$(product:Product):void{
+    this._selectedProduct$.next(product);
+  }
+
+  getSelectedProduct$(): BehaviorSubject<Product>{
+    return this._selectedProduct$;
+  }
+
+
 
 
   getProducts(): Observable<Product[]> {
