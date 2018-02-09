@@ -1,0 +1,21 @@
+  <div class="thumbnail product-box">
+    <img [src]="product.image" [attr.alt]="product.name" />
+    <div class="caption">
+      <h3>
+        <a href="#">{{ product.name }}</a>
+        <i class="fa fa-heart" [ngClass]="{'text-danger': product.favorite}" aria-hidden="true" (click)="toggleFavorite()" ></i>
+      </h3>
+      <p>Price : <strong>{{ product.price | currency:'USD':true:'1.2-2' }}</strong></p>
+
+      <p>
+        {{ product.description | truncate:truncateLimit }}
+        <strong class="showMore" (click)="showMore()" [ngClass]="{'isOpen': truncateLimit != defaulttruncateLimit}"></strong>
+      </p>
+
+      <p>
+        <a href="#" class="btn btn-success" role="button">Add To Cart</a>
+        <a href="#" class="btn btn-primary" role="button">See Details</a>
+      </p>
+    </div>
+  </div>
+

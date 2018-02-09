@@ -1,0 +1,40 @@
+/*=======================================
+  NAVBAR ADJUSTMENTS
+==================================================*/
+.navbar-brand {
+  font-size: 25px;
+  padding: 15px 80px 15px 60px;
+}
+.navbar-default .navbar-brand {
+  color: #000000;
+}
+.navbar-default {
+  background-color: #000000;
+  border-color: #000000;
+}
+.navbar {
+  border-radius: 0px;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #FFF;
+}
+.navbar-default .navbar-nav > li > a:hover {
+  color: #FFF;
+}
+
+.navbar-default .navbar-brand {
+  color: #FFFFFF;
+}
+.navbar-default .navbar-brand:hover {
+  color: #FFFFFF;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #050505;
+  background-color: #FFFFFF;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #000;
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover {
+  color: #000;
+}

@@ -1,0 +1,2 @@
+.showMore:before{ content: '+' }
+.showMore.isOpen:before{ content: '-' }
