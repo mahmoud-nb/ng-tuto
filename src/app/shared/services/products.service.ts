@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Product } from "../models/product";
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 
 @Injectable()
 export class ProductsService {
+
+
+  _cartNbr$ = new BehaviorSubject<number>(0);
+
 
   products:Product[];
   constructor() {
@@ -36,6 +40,11 @@ export class ProductsService {
         favorite: true
       }
     ];
+  }
+
+  incCartNbr(): void {
+    let currentCartNbr = this._cartNbr$.getValue();
+    this._cartNbr$.next(++currentCartNbr);
   }
 
 
