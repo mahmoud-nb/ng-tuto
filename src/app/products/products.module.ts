@@ -8,10 +8,13 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { RouterModule } from "@angular/router";
 import { routes } from "../shared/config/routes";
 import { AddProductComponent } from './add-product/add-product.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
   exports: [
